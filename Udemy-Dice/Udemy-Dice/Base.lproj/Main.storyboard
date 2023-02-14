@@ -18,34 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" image="AppBreweryBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zVs-ln-Jg3">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="AppBreweryBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zVs-ln-Jg3">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="DiceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Xhx-8j-Jpw">
                                 <rect key="frame" x="98" y="108" width="196" height="128"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="r02-e2-zn9">
-                                <rect key="frame" x="46" y="376" width="100" height="100"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="DiceTwo" translatesAutoresizingMaskIntoConstraints="NO" id="ziC-r3-s8D">
-                                <rect key="frame" x="254" y="376" width="100" height="100"/>
-                            </imageView>
                             <button opaque="NO" contentMode="top" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghH-tO-ASF">
-                                <rect key="frame" x="145" y="579" width="102" height="112"/>
+                                <rect key="frame" x="159" y="628" width="99" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <size key="titleShadowOffset" width="6" height="0.0"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="Play" imagePadding="12">
+                                <buttonConfiguration key="configuration" style="plain" title=" ">
                                     <imageReference key="image" image="play.fill" catalog="system" symbolScale="large"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large" weight="black"/>
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
-                                    <attributedString key="attributedSubtitle"/>
-                                    <color key="baseForegroundColor" red="1" green="0.85573783030165695" blue="0.26398727925006038" alpha="0.73864341887417218" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large" weight="black">
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="77"/>
+                                    </preferredSymbolConfiguration>
+                                    <color key="baseForegroundColor" red="1" green="0.59947755538736669" blue="0.0096098035353116007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="58f-X2-D05"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="r02-e2-zn9">
+                                <rect key="frame" x="35" y="376" width="100" height="100"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="DiceTwo" translatesAutoresizingMaskIntoConstraints="NO" id="ziC-r3-s8D">
+                                <rect key="frame" x="257" y="376" width="100" height="100"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -69,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1685" y="-1930"/>
+            <point key="canvasLocation" x="-1684.7328244274809" y="-1929.5774647887324"/>
         </scene>
     </scenes>
     <resources>
