@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -17,23 +17,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="AppBreweryBackground" translatesAutoresizingMaskIntoConstraints="NO" id="L4w-R9-wP4">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="AppBreweryBackground" translatesAutoresizingMaskIntoConstraints="NO" id="L4w-R9-wP4">
+                                <rect key="frame" x="-26" y="0.0" width="444" height="852"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="dice" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tey-l9-MdK">
-                                <rect key="frame" x="85" y="172.33333333333337" width="222" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="dice" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tey-l9-MdK">
+                                <rect key="frame" x="96.666666666666686" y="326.33333333333331" width="200" height="199.33333333333331"/>
                                 <color key="tintColor" red="0.77156328914141414" green="0.4517264367360368" blue="0.0056195638435471195" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="66f-oO-205"/>
+                                    <constraint firstAttribute="height" constant="200" id="IgJ-tv-wcL"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tey-l9-MdK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="16h-ZB-SdJ"/>
+                            <constraint firstItem="L4w-R9-wP4" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-26" id="Qxs-vm-Qav"/>
+                            <constraint firstItem="L4w-R9-wP4" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" constant="25" id="UAe-Vl-R82"/>
+                            <constraint firstItem="tey-l9-MdK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="iXk-Zn-dKm"/>
+                            <constraint firstAttribute="bottom" secondItem="L4w-R9-wP4" secondAttribute="bottom" id="mzb-Nx-Gqu"/>
+                            <constraint firstItem="L4w-R9-wP4" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="qGb-vM-VN7"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
+            <point key="canvasLocation" x="84.732824427480907" y="-1895.0704225352113"/>
         </scene>
     </scenes>
     <resources>
