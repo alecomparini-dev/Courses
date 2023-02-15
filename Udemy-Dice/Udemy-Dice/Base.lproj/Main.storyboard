@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -15,44 +15,86 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Udemy_Dice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="AppBreweryBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zVs-ln-Jg3">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="AppBreweryBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zVs-ln-Jg3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="DiceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Xhx-8j-Jpw">
-                                <rect key="frame" x="98" y="108" width="196" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="top" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghH-tO-ASF">
-                                <rect key="frame" x="159" y="628" width="99" height="97"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <size key="titleShadowOffset" width="6" height="0.0"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=" ">
-                                    <imageReference key="image" image="play.fill" catalog="system" symbolScale="large"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large" weight="black">
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="77"/>
-                                    </preferredSymbolConfiguration>
-                                    <color key="baseForegroundColor" red="1" green="0.59947755538736669" blue="0.0096098035353116007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="58f-X2-D05"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="r02-e2-zn9">
-                                <rect key="frame" x="35" y="376" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="DiceTwo" translatesAutoresizingMaskIntoConstraints="NO" id="ziC-r3-s8D">
-                                <rect key="frame" x="257" y="376" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="pOp-ED-ZdW">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbC-2o-BiZ" userLabel="TopView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="270"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="DiceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Xhx-8j-Jpw">
+                                                <rect key="frame" x="109" y="71" width="196" height="128"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Xhx-8j-Jpw" firstAttribute="centerY" secondItem="gbC-2o-BiZ" secondAttribute="centerY" id="9SL-st-2hM"/>
+                                            <constraint firstItem="Xhx-8j-Jpw" firstAttribute="centerX" secondItem="gbC-2o-BiZ" secondAttribute="centerX" id="GWL-jL-Zjj"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="87w-ei-nCc" userLabel="MiddleView">
+                                        <rect key="frame" x="0.0" y="272" width="414" height="270"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="133" translatesAutoresizingMaskIntoConstraints="NO" id="kSH-5u-ty5">
+                                                <rect key="frame" x="40.5" y="85" width="333" height="100"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="r02-e2-zn9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="DiceTwo" translatesAutoresizingMaskIntoConstraints="NO" id="ziC-r3-s8D">
+                                                        <rect key="frame" x="233" y="0.0" width="100" height="100"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="kSH-5u-ty5" firstAttribute="centerY" secondItem="87w-ei-nCc" secondAttribute="centerY" id="rpg-uL-5sx"/>
+                                            <constraint firstItem="kSH-5u-ty5" firstAttribute="centerX" secondItem="87w-ei-nCc" secondAttribute="centerX" id="uOb-Jf-xZr"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDa-2b-Z5C" userLabel="BottonView">
+                                        <rect key="frame" x="0.0" y="544" width="414" height="270"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="top" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghH-tO-ASF">
+                                                <rect key="frame" x="143.5" y="79.5" width="127" height="111"/>
+                                                <size key="titleShadowOffset" width="6" height="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=" ">
+                                                    <imageReference key="image" image="play.fill" catalog="system" symbolScale="large"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large" weight="black">
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="77"/>
+                                                    </preferredSymbolConfiguration>
+                                                    <color key="baseForegroundColor" red="1" green="0.59947755538736669" blue="0.0096098035353116007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="58f-X2-D05"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ghH-tO-ASF" firstAttribute="centerY" secondItem="fDa-2b-Z5C" secondAttribute="centerY" id="b4J-93-7hr"/>
+                                            <constraint firstItem="ghH-tO-ASF" firstAttribute="centerX" secondItem="fDa-2b-Z5C" secondAttribute="centerX" id="s1J-VT-Sva"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zVs-ln-Jg3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3nG-f8-XEE"/>
+                            <constraint firstItem="pOp-ED-ZdW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZJu-l9-y7m"/>
+                            <constraint firstItem="pOp-ED-ZdW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZVZ-Jt-EY0"/>
+                            <constraint firstItem="zVs-ln-Jg3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="hDE-37-o2T"/>
+                            <constraint firstItem="zVs-ln-Jg3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jeI-i1-BHL"/>
+                            <constraint firstAttribute="bottom" secondItem="zVs-ln-Jg3" secondAttribute="bottom" id="raW-gw-oHB"/>
+                            <constraint firstItem="pOp-ED-ZdW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="t4b-Qn-rsf"/>
+                            <constraint firstItem="pOp-ED-ZdW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="uVD-iT-UbB"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="dice1" destination="r02-e2-zn9" id="gIv-B1-PdX"/>
@@ -61,11 +103,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1880.1526717557251" y="-2175.3521126760565"/>
+            <point key="canvasLocation" x="-3419" y="-7470"/>
         </scene>
     </scenes>
     <resources>
-        <image name="AppBreweryBackground" width="384.66665649414062" height="582"/>
+        <image name="AppBreweryBackground" width="577" height="873"/>
         <image name="DiceOne" width="100" height="100"/>
         <image name="DiceTwo" width="100" height="100"/>
         <image name="DiceeLogo" width="196" height="128"/>
