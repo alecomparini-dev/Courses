@@ -18,11 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="AppBreweryBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zVs-ln-Jg3">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="AppBreweryBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zVs-ln-Jg3">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="DiceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Xhx-8j-Jpw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="DiceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Xhx-8j-Jpw">
                                 <rect key="frame" x="98" y="108" width="196" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="top" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghH-tO-ASF">
                                 <rect key="frame" x="159" y="628" width="99" height="97"/>
@@ -40,27 +42,17 @@
                                     <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="58f-X2-D05"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="r02-e2-zn9">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="r02-e2-zn9">
                                 <rect key="frame" x="35" y="376" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="DiceTwo" translatesAutoresizingMaskIntoConstraints="NO" id="ziC-r3-s8D">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="DiceTwo" translatesAutoresizingMaskIntoConstraints="NO" id="ziC-r3-s8D">
                                 <rect key="frame" x="257" y="376" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="zVs-ln-Jg3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SsF-UH-9oR"/>
-                            <constraint firstItem="zVs-ln-Jg3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-59" id="T5G-hr-0lo"/>
-                            <constraint firstItem="r02-e2-zn9" firstAttribute="top" secondItem="ziC-r3-s8D" secondAttribute="top" id="Vgb-wD-wMR"/>
-                            <constraint firstItem="zVs-ln-Jg3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XsT-GQ-YWC"/>
-                            <constraint firstItem="zVs-ln-Jg3" firstAttribute="centerY" secondItem="ziC-r3-s8D" secondAttribute="centerY" id="Y2T-pJ-E74"/>
-                            <constraint firstItem="zVs-ln-Jg3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fQG-xb-jeI"/>
-                            <constraint firstItem="Xhx-8j-Jpw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="kVz-fn-20l"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ziC-r3-s8D" secondAttribute="trailing" constant="39" id="qlc-cV-abZ"/>
-                            <constraint firstItem="Xhx-8j-Jpw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="rZu-hE-ub2"/>
-                            <constraint firstItem="r02-e2-zn9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="vkB-g8-7PN"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="dice1" destination="r02-e2-zn9" id="gIv-B1-PdX"/>
@@ -69,11 +61,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1684.7328244274809" y="-1929.5774647887324"/>
+            <point key="canvasLocation" x="-1880.1526717557251" y="-2175.3521126760565"/>
         </scene>
     </scenes>
     <resources>
-        <image name="AppBreweryBackground" width="596" height="842"/>
+        <image name="AppBreweryBackground" width="384.66665649414062" height="582"/>
         <image name="DiceOne" width="100" height="100"/>
         <image name="DiceTwo" width="100" height="100"/>
         <image name="DiceeLogo" width="196" height="128"/>

@@ -1,8 +1,19 @@
 {
   "images" : [
     {
-      "filename" : "background.pdf",
-      "idiom" : "universal"
+      "filename" : "background-2.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "background-1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "background.png",
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {
