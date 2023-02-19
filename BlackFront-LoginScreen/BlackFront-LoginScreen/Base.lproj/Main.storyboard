@@ -63,6 +63,9 @@
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="pressedLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wr6-lu-rGH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -91,6 +94,15 @@
                             <constraint firstItem="Sk4-sv-Sps" firstAttribute="leading" secondItem="al5-uR-yxC" secondAttribute="leading" id="wxN-ky-GrJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="avatarImageView" destination="CYf-KT-lxW" id="Kch-ea-LfR"/>
+                        <outlet property="emailLabel" destination="3Hu-w4-PI7" id="4Hw-7n-Dhl"/>
+                        <outlet property="emailTextField" destination="Sk4-sv-Sps" id="OTK-CM-ppN"/>
+                        <outlet property="loginButton" destination="5VE-GW-Oxs" id="M6W-wE-YMR"/>
+                        <outlet property="passwordLabel" destination="spt-0b-cK0" id="cjF-uS-KjH"/>
+                        <outlet property="passwordTextField" destination="ZtN-SN-W5E" id="Auy-SM-OCU"/>
+                        <outlet property="welcomeLabel" destination="al5-uR-yxC" id="nVV-Vj-OYm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
