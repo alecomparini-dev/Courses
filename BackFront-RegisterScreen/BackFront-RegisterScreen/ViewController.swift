@@ -66,11 +66,9 @@ class ViewController: UIViewController {
     
     
     func isAllFilledTextFields() -> Bool {
-        
-        
         filledTextFieldList.removeAll()
         for textField in textFieldList {
-            if textField.text != "" {
+            if (!textField.text!.isEmpty) {
                 filledTextFieldList.append(textField.text!)
             }
         }
