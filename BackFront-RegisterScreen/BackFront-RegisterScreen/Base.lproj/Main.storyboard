@@ -57,7 +57,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFJ-S3-ZOL">
-                                <rect key="frame" x="25" y="728" width="343" height="40"/>
+                                <rect key="frame" x="25" y="724" width="343" height="40"/>
                                 <color key="backgroundColor" red="0.11579338459999999" green="0.36716729399999998" blue="0.39418143030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="EfN-4X-cxg"/>
@@ -71,10 +71,14 @@
                                     <action selector="tappedRegisterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V3q-4e-DAi"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Tag-8U-EUX">
+                                <rect key="frame" x="25" y="769" width="343" height="4"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Tag-8U-EUX" firstAttribute="trailing" secondItem="bFJ-S3-ZOL" secondAttribute="trailing" id="0Sd-vf-2bY"/>
                             <constraint firstItem="7an-LH-lQ3" firstAttribute="leading" secondItem="wz1-WJ-Jof" secondAttribute="leading" id="3S8-sc-fwj"/>
                             <constraint firstItem="abM-p3-AO6" firstAttribute="leading" secondItem="7an-LH-lQ3" secondAttribute="leading" id="6ca-Xy-0GO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X3N-VW-cKo" secondAttribute="trailing" constant="25" id="7G2-5A-wdM"/>
@@ -83,6 +87,7 @@
                             <constraint firstItem="01e-ip-C7b" firstAttribute="leading" secondItem="hG4-EP-NQA" secondAttribute="leading" id="LSL-ec-FGu"/>
                             <constraint firstItem="h1x-jE-Z2Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="PSU-E8-5H7"/>
                             <constraint firstItem="7an-LH-lQ3" firstAttribute="trailing" secondItem="wz1-WJ-Jof" secondAttribute="trailing" id="PvE-dO-2PF"/>
+                            <constraint firstItem="Tag-8U-EUX" firstAttribute="top" secondItem="bFJ-S3-ZOL" secondAttribute="bottom" constant="5" id="YH9-RH-z92"/>
                             <constraint firstItem="abM-p3-AO6" firstAttribute="trailing" secondItem="7an-LH-lQ3" secondAttribute="trailing" id="aIM-Gv-GDh"/>
                             <constraint firstItem="abM-p3-AO6" firstAttribute="top" secondItem="hG4-EP-NQA" secondAttribute="bottom" constant="30" id="abJ-PU-8tz"/>
                             <constraint firstItem="h1x-jE-Z2Y" firstAttribute="top" secondItem="X3N-VW-cKo" secondAttribute="bottom" constant="8" symbolic="YES" id="beK-qp-SHY"/>
@@ -91,8 +96,9 @@
                             <constraint firstItem="hG4-EP-NQA" firstAttribute="top" secondItem="7an-LH-lQ3" secondAttribute="bottom" constant="8" symbolic="YES" id="faO-kE-lTP"/>
                             <constraint firstItem="X3N-VW-cKo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="iWE-vk-u7O"/>
                             <constraint firstItem="01e-ip-C7b" firstAttribute="top" secondItem="abM-p3-AO6" secondAttribute="bottom" constant="8" symbolic="YES" id="ihx-gY-6g0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bFJ-S3-ZOL" secondAttribute="bottom" constant="50" id="lTP-Ep-3sV"/>
+                            <constraint firstItem="Tag-8U-EUX" firstAttribute="leading" secondItem="bFJ-S3-ZOL" secondAttribute="leading" id="ji4-uL-m1K"/>
                             <constraint firstItem="wz1-WJ-Jof" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="mFX-tx-lFY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tag-8U-EUX" secondAttribute="bottom" constant="45" id="pE5-Le-wAI"/>
                             <constraint firstItem="hG4-EP-NQA" firstAttribute="trailing" secondItem="7an-LH-lQ3" secondAttribute="trailing" id="s5T-8q-sax"/>
                             <constraint firstItem="bFJ-S3-ZOL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="tek-J4-v0Z"/>
                             <constraint firstItem="01e-ip-C7b" firstAttribute="trailing" secondItem="hG4-EP-NQA" secondAttribute="trailing" id="wCK-XQ-7qY"/>
@@ -105,12 +111,13 @@
                         <outlet property="emailTextField" destination="01e-ip-C7b" id="dp3-10-yuK"/>
                         <outlet property="nameTextField" destination="hG4-EP-NQA" id="ONR-7k-1Kh"/>
                         <outlet property="passwordTextField" destination="h1x-jE-Z2Y" id="vlL-Mu-qhk"/>
+                        <outlet property="registerProgressView" destination="Tag-8U-EUX" id="bfd-0j-3rC"/>
                         <outlet property="tappedRegisterButton" destination="bFJ-S3-ZOL" id="Jpp-kH-YyW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-134" y="-893"/>
+            <point key="canvasLocation" x="-459" y="-1720"/>
         </scene>
     </scenes>
     <resources>

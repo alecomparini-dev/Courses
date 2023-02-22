@@ -9,11 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var tappedRegisterButton: UIButton!
+    @IBOutlet weak var registerProgressView: UIProgressView!
+    
+    var filledTextFieldList: [String] = []
+    var textFieldList: [UITextField] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,17 +25,25 @@ class ViewController: UIViewController {
         setKeyBoardType()
         setTextFieldDelegate()
         configureRegisterButton()
+        configureRegisterProgressView()
+        textFieldList = [nameTextField, emailTextField, passwordTextField]
+        updateRegisterProgressView()
     }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
         let response: String = """
-        Name: \(nameTextField.text ?? "")
-        E-mail: \(emailTextField.text ?? "")
-        password: \(passwordTextField.text ?? "")
+          Name: \(nameTextField.text ?? "")
+          E-mail: \(emailTextField.text ?? "")
+          password: \(passwordTextField.text ?? "")
+          filledTextFieldsList: \(filledTextFieldList)
         """
         print(response)
     }
     
+    func configureRegisterProgressView() {
+        registerProgressView.tintColor = UIColor.green.withAlphaComponent(0.6)
+        registerProgressView.trackTintColor = UIColor.myGreenColor.withAlphaComponent(0.4)
+    }
 
     func configureRegisterButton() {
         tappedRegisterButton.isEnabled = false
@@ -55,11 +66,26 @@ class ViewController: UIViewController {
     
     
     func isAllFilledTextFields() -> Bool {
-        return nameTextField.text != "" && emailTextField.text != "" && passwordTextField.text != ""
+        
+        
+        filledTextFieldList.removeAll()
+        for textField in textFieldList {
+            if textField.text != "" {
+                filledTextFieldList.append(textField.text!)
+            }
+        }
+        
+        return textFieldList.count == filledTextFieldList.count
     }
     
     func enableRegisterButton() {
         tappedRegisterButton.isEnabled = isAllFilledTextFields()
+    }
+    
+    func updateRegisterProgressView() {
+        let totalParts = Progress(totalUnitCount: Int64(textFieldList.count))
+        totalParts.completedUnitCount = Int64(filledTextFieldList.count)
+        registerProgressView.setProgress(Float(totalParts.fractionCompleted), animated: true)
     }
     
     
@@ -78,6 +104,7 @@ extension ViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         enableRegisterButton()
+        updateRegisterProgressView()
         textField.layer.borderWidth = 0
     }
     
