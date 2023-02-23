@@ -13,6 +13,7 @@
 		025E746729A8008D007400BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 025E746529A8008D007400BE /* Main.storyboard */; };
 		025E746929A8008D007400BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 025E746829A8008D007400BE /* Assets.xcassets */; };
 		025E746C29A8008D007400BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 025E746A29A8008D007400BE /* LaunchScreen.storyboard */; };
+		025E747629A8088B007400BE /* ModalFullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025E747529A8088B007400BE /* ModalFullScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		025E746829A8008D007400BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		025E746B29A8008D007400BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		025E746D29A8008D007400BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		025E747529A8088B007400BE /* ModalFullScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalFullScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				025E745F29A8008D007400BE /* AppDelegate.swift */,
 				025E746129A8008D007400BE /* SceneDelegate.swift */,
 				025E746329A8008D007400BE /* ViewController.swift */,
+				025E747529A8088B007400BE /* ModalFullScreenViewController.swift */,
 				025E746529A8008D007400BE /* Main.storyboard */,
 				025E746829A8008D007400BE /* Assets.xcassets */,
 				025E746A29A8008D007400BE /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				025E746429A8008D007400BE /* ViewController.swift in Sources */,
+				025E747629A8088B007400BE /* ModalFullScreenViewController.swift in Sources */,
 				025E746029A8008D007400BE /* AppDelegate.swift in Sources */,
 				025E746229A8008D007400BE /* SceneDelegate.swift in Sources */,
 			);
