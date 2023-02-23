@@ -19,9 +19,7 @@ class ModalFullScreenViewController: UIViewController {
     
     
     @IBAction func tappedCloseFullScreenButton(_ sender: UIButton) {
-        
         self.dismiss(animated: true)
-        
     }
     
 
