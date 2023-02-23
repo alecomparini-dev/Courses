@@ -69,6 +69,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="rectangle.expand.vertical" catalog="system" title=" Open FullScreen">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="rvg-FU-pG0" kind="show" id="89c-T5-3EK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zWj-OA-ldv"/>
@@ -91,7 +94,7 @@
         <!--View Controller-->
         <scene sceneID="egf-KB-04K">
             <objects>
-                <viewController id="rvg-FU-pG0" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="rvg-FU-pG0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C9n-BX-bjF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,6 +123,7 @@
                             <constraint firstItem="ShP-pW-2Wz" firstAttribute="centerY" secondItem="C9n-BX-bjF" secondAttribute="centerY" id="fH2-in-MDm"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="O2i-Jn-Y3x"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8n-R7-TGB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
