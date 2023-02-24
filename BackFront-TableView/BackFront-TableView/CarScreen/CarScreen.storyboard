@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0FQ-AH-mLn">
-                                <rect key="frame" x="25" y="115" width="343" height="688"/>
+                                <rect key="frame" x="0.0" y="115" width="393" height="688"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -33,17 +33,20 @@
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tqi-Fg-Vdw" secondAttribute="trailing" constant="25" id="4FT-46-Qoe"/>
                             <constraint firstItem="tqi-Fg-Vdw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="8Je-Wl-LwL"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0FQ-AH-mLn" secondAttribute="trailing" constant="25" id="9aB-F9-hK0"/>
-                            <constraint firstItem="0FQ-AH-mLn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="FmY-8H-ogz"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0FQ-AH-mLn" secondAttribute="trailing" id="9aB-F9-hK0"/>
+                            <constraint firstItem="0FQ-AH-mLn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="FmY-8H-ogz"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="0FQ-AH-mLn" secondAttribute="bottom" constant="15" id="arI-6A-kYN"/>
                             <constraint firstItem="0FQ-AH-mLn" firstAttribute="top" secondItem="tqi-Fg-Vdw" secondAttribute="bottom" constant="25" id="cMi-qV-Oot"/>
                             <constraint firstItem="tqi-Fg-Vdw" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="jw4-vC-wft"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="0FQ-AH-mLn" id="eBB-vW-2Om"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="89" y="-27"/>
+            <point key="canvasLocation" x="-654" y="-63"/>
         </scene>
     </scenes>
     <resources>
