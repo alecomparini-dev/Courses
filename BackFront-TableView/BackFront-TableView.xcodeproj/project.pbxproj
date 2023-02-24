@@ -14,7 +14,9 @@
 		02C50F9D29A9496300504DB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C50F9C29A9496300504DB7 /* Assets.xcassets */; };
 		02C50FA029A9496300504DB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C50F9E29A9496300504DB7 /* LaunchScreen.storyboard */; };
 		02C50FAA29A94D5200504DB7 /* CarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C50FA829A94D5200504DB7 /* CarScreen.swift */; };
-		02C50FAB29A94D5200504DB7 /* CarScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C50FA929A94D5200504DB7 /* CarScreen.xib */; };
+		02C50FAD29A9536500504DB7 /* CarScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C50FAC29A9536500504DB7 /* CarScreen.storyboard */; };
+		02C50FB429A957C400504DB7 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C50FB229A957C400504DB7 /* CarTableViewCell.swift */; };
+		02C50FB529A957C400504DB7 /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C50FB329A957C400504DB7 /* CarTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +29,9 @@
 		02C50F9F29A9496300504DB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02C50FA129A9496300504DB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02C50FA829A94D5200504DB7 /* CarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarScreen.swift; sourceTree = "<group>"; };
-		02C50FA929A94D5200504DB7 /* CarScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarScreen.xib; sourceTree = "<group>"; };
+		02C50FAC29A9536500504DB7 /* CarScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarScreen.storyboard; sourceTree = "<group>"; };
+		02C50FB229A957C400504DB7 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
+		02C50FB329A957C400504DB7 /* CarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		02C50F9229A9496200504DB7 /* BackFront-TableView */ = {
 			isa = PBXGroup;
 			children = (
+				02C50FB029A9578C00504DB7 /* Components */,
 				02C50FA729A94CF200504DB7 /* CarScreen */,
 				02C50F9329A9496200504DB7 /* AppDelegate.swift */,
 				02C50F9529A9496200504DB7 /* SceneDelegate.swift */,
@@ -76,9 +81,26 @@
 			isa = PBXGroup;
 			children = (
 				02C50FA829A94D5200504DB7 /* CarScreen.swift */,
-				02C50FA929A94D5200504DB7 /* CarScreen.xib */,
+				02C50FAC29A9536500504DB7 /* CarScreen.storyboard */,
 			);
 			path = CarScreen;
+			sourceTree = "<group>";
+		};
+		02C50FB029A9578C00504DB7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				02C50FB129A9579800504DB7 /* CarTableViewCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		02C50FB129A9579800504DB7 /* CarTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				02C50FB229A957C400504DB7 /* CarTableViewCell.swift */,
+				02C50FB329A957C400504DB7 /* CarTableViewCell.xib */,
+			);
+			path = CarTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,10 +161,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02C50FAB29A94D5200504DB7 /* CarScreen.xib in Resources */,
 				02C50FA029A9496300504DB7 /* LaunchScreen.storyboard in Resources */,
 				02C50F9D29A9496300504DB7 /* Assets.xcassets in Resources */,
+				02C50FB529A957C400504DB7 /* CarTableViewCell.xib in Resources */,
 				02C50F9B29A9496200504DB7 /* Main.storyboard in Resources */,
+				02C50FAD29A9536500504DB7 /* CarScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +180,7 @@
 				02C50F9829A9496200504DB7 /* ViewController.swift in Sources */,
 				02C50F9429A9496200504DB7 /* AppDelegate.swift in Sources */,
 				02C50F9629A9496200504DB7 /* SceneDelegate.swift in Sources */,
+				02C50FB429A957C400504DB7 /* CarTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

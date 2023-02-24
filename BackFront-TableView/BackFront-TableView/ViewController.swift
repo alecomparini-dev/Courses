@@ -15,5 +15,14 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func tappedSeeCarButton(_ sender: UIButton) {
+        
+        let carScreen: CarScreen? = UIStoryboard(name: "CarScreen", bundle: nil)
+            .instantiateViewController(withIdentifier: "CarScreen") as? CarScreen
+        
+        self.navigationController?.pushViewController(carScreen ?? UIViewController(), animated: true)
+        
+        
+    }
 }
 

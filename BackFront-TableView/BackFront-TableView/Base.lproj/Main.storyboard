@@ -28,6 +28,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="car" catalog="system" title=" See Car Brand">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="tappedSeeCarButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Crh-2I-gAO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
