@@ -13,6 +13,10 @@
 		02BE038629A821930088FBFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BE038429A821930088FBFA /* Main.storyboard */; };
 		02BE038829A821950088FBFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02BE038729A821950088FBFA /* Assets.xcassets */; };
 		02BE038B29A821950088FBFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BE038929A821950088FBFA /* LaunchScreen.storyboard */; };
+		02BE039329A824F10088FBFA /* ModalStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BE039229A824F10088FBFA /* ModalStoryboard.storyboard */; };
+		02BE039529A825320088FBFA /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BE039429A825320088FBFA /* ModalViewController.swift */; };
+		02BE039729A83A3C0088FBFA /* NavigationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BE039629A83A3C0088FBFA /* NavigationStoryboard.storyboard */; };
+		02BE039929A83CAF0088FBFA /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BE039829A83CAF0088FBFA /* NavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		02BE038729A821950088FBFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02BE038A29A821950088FBFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02BE038C29A821950088FBFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02BE039229A824F10088FBFA /* ModalStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ModalStoryboard.storyboard; sourceTree = "<group>"; };
+		02BE039429A825320088FBFA /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		02BE039629A83A3C0088FBFA /* NavigationStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NavigationStoryboard.storyboard; sourceTree = "<group>"; };
+		02BE039829A83CAF0088FBFA /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				02BE038729A821950088FBFA /* Assets.xcassets */,
 				02BE038929A821950088FBFA /* LaunchScreen.storyboard */,
 				02BE038C29A821950088FBFA /* Info.plist */,
+				02BE039429A825320088FBFA /* ModalViewController.swift */,
+				02BE039229A824F10088FBFA /* ModalStoryboard.storyboard */,
+				02BE039829A83CAF0088FBFA /* NavigationViewController.swift */,
+				02BE039629A83A3C0088FBFA /* NavigationStoryboard.storyboard */,
 			);
 			path = "BackFront-NavigationCorrect";
 			sourceTree = "<group>";
@@ -128,6 +140,8 @@
 				02BE038B29A821950088FBFA /* LaunchScreen.storyboard in Resources */,
 				02BE038829A821950088FBFA /* Assets.xcassets in Resources */,
 				02BE038629A821930088FBFA /* Main.storyboard in Resources */,
+				02BE039729A83A3C0088FBFA /* NavigationStoryboard.storyboard in Resources */,
+				02BE039329A824F10088FBFA /* ModalStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02BE039529A825320088FBFA /* ModalViewController.swift in Sources */,
 				02BE038329A821930088FBFA /* ViewController.swift in Sources */,
 				02BE037F29A821930088FBFA /* AppDelegate.swift in Sources */,
+				02BE039929A83CAF0088FBFA /* NavigationViewController.swift in Sources */,
 				02BE038129A821930088FBFA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

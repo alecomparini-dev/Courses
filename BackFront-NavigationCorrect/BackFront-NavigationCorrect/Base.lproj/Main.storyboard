@@ -16,45 +16,81 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAIN SCREEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NxB-dN-9hc">
-                                <rect key="frame" x="25" y="143" width="343" height="24"/>
+                                <rect key="frame" x="25" y="80" width="343" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="122" translatesAutoresizingMaskIntoConstraints="NO" id="57X-xe-8jK">
-                                <rect key="frame" x="111.33333333333333" y="286" width="170.66666666666669" height="280"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="57X-xe-8jK">
+                                <rect key="frame" x="111.33333333333333" y="366.66666666666669" width="170.66666666666669" height="118.66666666666669"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ods-AC-nG5">
-                                        <rect key="frame" x="0.0" y="0.0" width="170.66666666666666" height="79"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="170.66666666666666" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up.fill" catalog="system" imagePlacement="trailing" title="Open Modal ">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tappedOpenModalScreenButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jSV-rE-4Ao"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9S-1I-CdZ">
-                                        <rect key="frame" x="0.0" y="201" width="170.66666666666666" height="79"/>
+                                        <rect key="frame" x="0.0" y="84.333333333333314" width="170.66666666666666" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="Open Navigation ">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="openNavigationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n4k-06-lq5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="blO-AP-L8b"/>
-                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="80b-nb-ZXu">
+                                <rect key="frame" x="25" y="681" width="343" height="77"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UvG-Ch-cfK">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="33.666666666666664"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33.670000000000002" id="5tW-F6-mIk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1h6-fY-b1w">
+                                        <rect key="frame" x="0.0" y="42.666666666666629" width="343" height="34.333333333333343"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34.329999999999998" id="Bmk-n3-z24"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="rectangle.portrait.and.arrow.right" catalog="system" imagePlacement="trailing" title="Open Navigation Correct ">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tappedNavigationCorrectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oUu-Da-zCt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.040102660659999997" green="0.24150502679999999" blue="0.2239385247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="80b-nb-ZXu" secondAttribute="trailing" constant="25" id="94M-ht-2dV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NxB-dN-9hc" secondAttribute="trailing" constant="25" id="C2g-bv-BcB"/>
-                            <constraint firstItem="NxB-dN-9hc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="IFc-mw-FzQ"/>
-                            <constraint firstItem="57X-xe-8jK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LbT-hA-Buu"/>
+                            <constraint firstItem="57X-xe-8jK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GTH-iD-zQt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="80b-nb-ZXu" secondAttribute="bottom" constant="60" id="MNl-Xd-r3F"/>
                             <constraint firstItem="57X-xe-8jK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TyP-RQ-c7e"/>
+                            <constraint firstItem="80b-nb-ZXu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="VSH-9l-Hqx"/>
+                            <constraint firstItem="NxB-dN-9hc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="80" id="Yug-wo-ydD"/>
+                            <constraint firstItem="57X-xe-8jK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jJH-GQ-KNB"/>
                             <constraint firstItem="NxB-dN-9hc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="jJY-IB-z2v"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KpC-be-gCn"/>
+                    <connections>
+                        <outlet property="sendTextTextField" destination="UvG-Ch-cfK" id="9iO-NG-MmX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,6 +117,7 @@
     </scenes>
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="109"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
     </resources>
 </document>
