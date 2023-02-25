@@ -36,6 +36,7 @@ extension CarScreen: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: CarTableViewCell.identifier, for: indexPath) as? CarTableViewCell
+        
         cell?.setupCell(brand: listCar[indexPath.row] )
         
         return cell ?? UITableViewCell()

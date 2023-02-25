@@ -17,6 +17,7 @@
 		02C50FDA29A97CBA00504DB7 /* CarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C50FD929A97CBA00504DB7 /* CarScreen.swift */; };
 		02C50FE129A9807400504DB7 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C50FDF29A9807400504DB7 /* CarTableViewCell.swift */; };
 		02C50FE229A9807400504DB7 /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C50FE029A9807400504DB7 /* CarTableViewCell.xib */; };
+		02C50FE429A980F200504DB7 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C50FE329A980F200504DB7 /* Car.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		02C50FD929A97CBA00504DB7 /* CarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarScreen.swift; sourceTree = "<group>"; };
 		02C50FDF29A9807400504DB7 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		02C50FE029A9807400504DB7 /* CarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarTableViewCell.xib; sourceTree = "<group>"; };
+		02C50FE329A980F200504DB7 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		02C50FDC29A9802C00504DB7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				02C50FE329A980F200504DB7 /* Car.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			files = (
 				02C50FDA29A97CBA00504DB7 /* CarScreen.swift in Sources */,
 				02C50FC729A97B8F00504DB7 /* ViewController.swift in Sources */,
+				02C50FE429A980F200504DB7 /* Car.swift in Sources */,
 				02C50FC329A97B8F00504DB7 /* AppDelegate.swift in Sources */,
 				02C50FC529A97B8F00504DB7 /* SceneDelegate.swift in Sources */,
 				02C50FE129A9807400504DB7 /* CarTableViewCell.swift in Sources */,
