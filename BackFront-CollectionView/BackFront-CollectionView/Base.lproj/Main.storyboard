@@ -24,9 +24,12 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOs-Rc-yjg">
                                 <rect key="frame" x="106.66666666666669" y="408.66666666666669" width="180" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="car.rear" catalog="system" title=" OPEN LIST CAR">
+                                <buttonConfiguration key="configuration" style="plain" image="car" catalog="system" title=" OPEN LIST CAR">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="tappedOpenCarScreenButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fiH-fS-Rs7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -65,6 +68,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="car.rear" catalog="system" width="128" height="95"/>
+        <image name="car" catalog="system" width="128" height="95"/>
     </resources>
 </document>
