@@ -20,13 +20,10 @@ class Screen01: UIViewController {
     }
     
     @IBAction func tappedEditProfileButton(_ sender: UIButton) {
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-            imagePicker.delegate = self
-            imagePicker.sourceType = .photoLibrary
-            imagePicker.allowsEditing = false
-            
-            present(imagePicker, animated: true, completion: nil)
-        }
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = false
+        configAlert()
+        
     }
     
     
@@ -53,6 +50,47 @@ class Screen01: UIViewController {
         editProfileButton.tintColor = .white
         editProfileButton.setTitle(" Image", for: .normal)
         editProfileButton.titleLabel?.font = .systemFont(ofSize: 14)
+    }
+    
+    
+    func configAlert() {
+        let alert: UIAlertController = UIAlertController(title: "Choose source", message:"", preferredStyle: .actionSheet)
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { UIAlertAction in
+            self.openCamera()
+        }
+        let gallaryAction = UIAlertAction(title: "Gallary", style: .default) { UIAlertAction in
+            self.openGallary()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alert.addAction(cameraAction)
+        alert.addAction(gallaryAction)
+        alert.addAction(cancelAction)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func openCamera() {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePicker.sourceType = .camera
+            self.present(imagePicker, animated: true,completion: nil)
+            return
+        }
+        alertNotCamera()
+    }
+    
+    func openGallary() {
+        print("open gallary")
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            imagePicker.sourceType = .photoLibrary
+            self.present(imagePicker, animated: true,completion: nil)
+        }
+    }
+    
+    func alertNotCamera() {
+        let alertWarning = UIAlertController(title: "Warning", message: "You dont't have camera", preferredStyle: .alert)
+        alertWarning.addAction(UIAlertAction(title: "OK", style: .cancel,handler: nil))
+        self.present(alertWarning, animated: true)
     }
     
     
