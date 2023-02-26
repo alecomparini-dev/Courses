@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cvs-7t-wc1">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="7sd-d0-BlP">
+            <objects>
+                <viewController id="t7v-76-uo4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SRX-rr-VnR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dCh-xI-LRI"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="jeT-4O-hbg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hov-tq-o82" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2611" y="-885"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="xLI-hQ-EgJ">
+            <objects>
+                <viewController storyboardIdentifier="Screen01" id="sdS-BZ-Kcr" customClass="Screen01" customModule="BackFront_ChallengeProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gjx-DM-XHm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5RX-N8-s1C" userLabel="ViewBackground">
+                                <rect key="frame" x="0.0" y="139" width="393" height="630"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ZU-b0-auU">
+                                        <rect key="frame" x="319" y="20" width="39" height="26"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" Button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedEditProfileButton:" destination="sdS-BZ-Kcr" eventType="touchUpInside" id="Neh-2T-rj1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.11579338459999999" green="0.36716729399999998" blue="0.39418143030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="1ZU-b0-auU" firstAttribute="top" secondItem="5RX-N8-s1C" secondAttribute="top" constant="20" id="MNl-db-LlJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="1ZU-b0-auU" secondAttribute="trailing" constant="35" id="nd3-F4-oD6"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zwK-XA-j97">
+                                <rect key="frame" x="121.66666666666669" y="64" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="ZN6-lC-kEd"/>
+                                    <constraint firstAttribute="width" constant="150" id="fBa-0c-WoY"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zne-lS-Frp"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Zne-lS-Frp" firstAttribute="trailing" secondItem="5RX-N8-s1C" secondAttribute="trailing" id="5k5-9w-s8u"/>
+                            <constraint firstItem="5RX-N8-s1C" firstAttribute="top" secondItem="Zne-lS-Frp" secondAttribute="top" constant="80" id="TL0-gv-UOi"/>
+                            <constraint firstItem="zwK-XA-j97" firstAttribute="centerX" secondItem="gjx-DM-XHm" secondAttribute="centerX" id="hf5-hh-5de"/>
+                            <constraint firstItem="zwK-XA-j97" firstAttribute="top" secondItem="Zne-lS-Frp" secondAttribute="top" constant="5" id="ja4-bk-zp3"/>
+                            <constraint firstItem="Zne-lS-Frp" firstAttribute="bottom" secondItem="5RX-N8-s1C" secondAttribute="bottom" id="sQc-It-t6s"/>
+                            <constraint firstItem="5RX-N8-s1C" firstAttribute="leading" secondItem="Zne-lS-Frp" secondAttribute="leading" id="z5j-st-271"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="waT-OJ-wU3"/>
+                    <connections>
+                        <outlet property="editProfileButton" destination="1ZU-b0-auU" id="w7o-WY-CI4"/>
+                        <outlet property="profileImageView" destination="zwK-XA-j97" id="6xJ-FV-SG5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1F0-n6-Ldy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2647" y="-1677"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="HWK-cx-k01">
+            <objects>
+                <viewController id="g8L-l4-V7f" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XRT-PO-81Z">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yZ7-gh-IOC"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="AHY-r7-rX9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Em3-gP-w1e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1669" y="-1237"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="VkC-6Q-nFh">
+            <objects>
+                <tabBarController id="cvs-7t-wc1" customClass="TabBarViewController" customModule="BackFront_ChallengeProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p0R-T8-b9d">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="sdS-BZ-Kcr" kind="relationship" relationship="viewControllers" id="WIX-cl-neL"/>
+                        <segue destination="t7v-76-uo4" kind="relationship" relationship="viewControllers" id="89g-z3-iBI"/>
+                        <segue destination="g8L-l4-V7f" kind="relationship" relationship="viewControllers" id="iQB-An-wCj"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="txg-ua-wG0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3648" y="-1237"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
