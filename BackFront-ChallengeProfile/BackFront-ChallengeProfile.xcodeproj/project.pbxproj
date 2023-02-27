@@ -11,6 +11,9 @@
 		02454DEB29ABDF78002941F4 /* Screen01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02454DEA29ABDF78002941F4 /* Screen01.swift */; };
 		02454DED29ABDF8D002941F4 /* Screen02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02454DEC29ABDF8D002941F4 /* Screen02.swift */; };
 		02454DEF29ABDFA4002941F4 /* Screen03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02454DEE29ABDFA3002941F4 /* Screen03.swift */; };
+		02454DF429AC23D7002941F4 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02454DF329AC23D7002941F4 /* Contact.swift */; };
+		02454DF829AC280B002941F4 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02454DF629AC280B002941F4 /* ContactTableViewCell.swift */; };
+		02454DF929AC280B002941F4 /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02454DF729AC280B002941F4 /* ContactTableViewCell.xib */; };
 		02A089E329ABCFA000898050 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A089E229ABCFA000898050 /* AppDelegate.swift */; };
 		02A089E529ABCFA000898050 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A089E429ABCFA000898050 /* SceneDelegate.swift */; };
 		02A089EC29ABCFA200898050 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02A089EB29ABCFA200898050 /* Assets.xcassets */; };
@@ -23,6 +26,9 @@
 		02454DEA29ABDF78002941F4 /* Screen01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen01.swift; sourceTree = "<group>"; };
 		02454DEC29ABDF8D002941F4 /* Screen02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen02.swift; sourceTree = "<group>"; };
 		02454DEE29ABDFA3002941F4 /* Screen03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen03.swift; sourceTree = "<group>"; };
+		02454DF329AC23D7002941F4 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		02454DF629AC280B002941F4 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		02454DF729AC280B002941F4 /* ContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactTableViewCell.xib; sourceTree = "<group>"; };
 		02A089DF29ABCFA000898050 /* BackFront-ChallengeProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BackFront-ChallengeProfile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02A089E229ABCFA000898050 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02A089E429ABCFA000898050 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +49,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02454DF229AC23BD002941F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				02454DF329AC23D7002941F4 /* Contact.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		02454DF529AC2402002941F4 /* ContactTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				02454DF629AC280B002941F4 /* ContactTableViewCell.swift */,
+				02454DF729AC280B002941F4 /* ContactTableViewCell.xib */,
+			);
+			path = ContactTableViewCell;
+			sourceTree = "<group>";
+		};
 		02A089D629ABCFA000898050 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +85,8 @@
 		02A089E129ABCFA000898050 /* BackFront-ChallengeProfile */ = {
 			isa = PBXGroup;
 			children = (
+				02454DF529AC2402002941F4 /* ContactTableViewCell */,
+				02454DF229AC23BD002941F4 /* Model */,
 				02A089F629ABD02400898050 /* Screens */,
 				02A089E229ABCFA000898050 /* AppDelegate.swift */,
 				02A089E429ABCFA000898050 /* SceneDelegate.swift */,
@@ -166,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02454DF929AC280B002941F4 /* ContactTableViewCell.xib in Resources */,
 				02A089FD29ABD10700898050 /* Main.storyboard in Resources */,
 				02A089EF29ABCFA200898050 /* LaunchScreen.storyboard in Resources */,
 				02A089EC29ABCFA200898050 /* Assets.xcassets in Resources */,
@@ -183,8 +209,10 @@
 				02454DE929ABD252002941F4 /* TabBarViewController.swift in Sources */,
 				02A089E329ABCFA000898050 /* AppDelegate.swift in Sources */,
 				02454DEB29ABDF78002941F4 /* Screen01.swift in Sources */,
+				02454DF829AC280B002941F4 /* ContactTableViewCell.swift in Sources */,
 				02454DED29ABDF8D002941F4 /* Screen02.swift in Sources */,
 				02A089E529ABCFA000898050 /* SceneDelegate.swift in Sources */,
+				02454DF429AC23D7002941F4 /* Contact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +351,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2HCBZJR5K3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "BackFront-ChallengeProfile/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -330,7 +359,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -354,6 +383,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2HCBZJR5K3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "BackFront-ChallengeProfile/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -361,7 +391,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

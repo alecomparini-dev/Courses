@@ -11,8 +11,14 @@ class Screen01: UIViewController {
 
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var editProfileButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var contactNameTextField: UITextField!
+    
+    lazy var contacts: [Contact] = [Contact(name: "Alessandro", imageProfile: profileImageView.image ?? UIImage())]
     
     var imagePicker = UIImagePickerController()
+    enum ChosenUploadEnum: String, CaseIterable {case profile = "profile"; case contact = "contact"}
+    var chosenUpload: ChosenUploadEnum?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,23 +26,35 @@ class Screen01: UIViewController {
     }
     
     @IBAction func tappedEditProfileButton(_ sender: UIButton) {
-        imagePicker.delegate = self
-        imagePicker.allowsEditing = false
-        configAlert()
-        
+        uploadImage(ChosenUploadEnum.profile)
     }
     
+    @IBAction func tappedAddContactButton(_ sender: UIButton) {
+//        validateAddContact()
+        uploadImage(ChosenUploadEnum.contact)
+    }
     
     func configScreen01() {
         view.backgroundColor = .white
         configScreenProfile()
+        configTableView()
     }
     
     func configScreenProfile() {
         configProfile()
         configEditProfileButton()
+        configTapGestureImageView()
     }
     
+    func configTapGestureImageView() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(Screen01.tappedMe))
+        profileImageView.addGestureRecognizer(tapGestureRecognizer)
+        profileImageView.isUserInteractionEnabled = true
+    }
+    
+    @objc func tappedMe() {
+        uploadImage(ChosenUploadEnum.profile)
+    }
     
     func configProfile() {
         profileImageView.image = UIImage(systemName: "person.circle.fill")
@@ -52,8 +70,9 @@ class Screen01: UIViewController {
         editProfileButton.titleLabel?.font = .systemFont(ofSize: 14)
     }
     
-    
-    func configAlert() {
+    func uploadImage(_ chosenUploadImage: ChosenUploadEnum) {
+        configImagePicker()
+        self.chosenUpload = chosenUploadImage
         let alert: UIAlertController = UIAlertController(title: "Choose source", message:"", preferredStyle: .actionSheet)
         let cameraAction = UIAlertAction(title: "Camera", style: .default) { UIAlertAction in
             self.openCamera()
@@ -80,7 +99,6 @@ class Screen01: UIViewController {
     }
     
     func openGallary() {
-        print("open gallary")
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             imagePicker.sourceType = .photoLibrary
             self.present(imagePicker, animated: true,completion: nil)
@@ -93,9 +111,45 @@ class Screen01: UIViewController {
         self.present(alertWarning, animated: true)
     }
     
+    func configImagePicker() {
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = false
+    }
+    
+    
+    func configTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(ContactTableViewCell.nib(), forCellReuseIdentifier: ContactTableViewCell.identificar)
+    }
     
 
 }
+
+// MARK: extension tableView
+extension Screen01: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return contacts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ContactTableViewCell.identificar, for: indexPath) as? ContactTableViewCell
+        
+        cell?.setuCell(contact: contacts[indexPath.row] )
+        
+        return cell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+    
+    
+}
+
+
+// MARK: extension view
 
 extension UIImageView {
     func roundedImage(borderWidth bdWidth: CGFloat = 0, borderColor bdColor: CGColor = UIColor.white.cgColor) {
@@ -109,14 +163,27 @@ extension UIImageView {
     
 }
 
+
+
+//MARK: extension Image Picker
+
 extension Screen01: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
         
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            profileImageView.image = image
+            if chosenUpload == ChosenUploadEnum.profile {
+                profileImageView.image = image
+                profileImageView.roundedImage(borderWidth: 7.0, borderColor: UIColor.white.cgColor)
+            }
+            
+            if chosenUpload == ChosenUploadEnum.contact {
+                contacts.append(Contact(name: contactNameTextField.text ?? "" , imageProfile: image))
+                tableView.reloadData()
+                contactNameTextField.text = ""
+            }
+            
         }
         
     }
