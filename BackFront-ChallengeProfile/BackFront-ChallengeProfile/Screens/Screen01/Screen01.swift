@@ -14,6 +14,8 @@ class Screen01: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var contactNameTextField: UITextField!
     
+    let imagePicker = UIImagePickerController()
+    
     lazy var contacts: [Contact] = [Contact(name: "Alessandro", imageProfile: profileImageView.image ?? UIImage())]
     
     enum ChosenUploadEnum: String, CaseIterable {case profile = "profile"; case contact = "contact"}
@@ -37,6 +39,7 @@ class Screen01: UIViewController {
         view.backgroundColor = .white
         configScreenProfile()
         configTableView()
+        imagePicker.delegate = self
     }
     
     func configScreenProfile() {
@@ -89,12 +92,11 @@ class Screen01: UIViewController {
     }
     
     func openCamera() {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.sourceType = UIImagePickerController.SourceType.camera
-            imagePicker.allowsEditing = false
-            imagePicker.delegate = self
-            self.present(imagePicker, animated: true, completion: nil)
+        self.imagePicker.allowsEditing = false
+        print(UIImagePickerController.isSourceTypeAvailable(.camera))
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePicker.sourceType = .camera
+            present(imagePicker, animated: true, completion: nil)
             return
         }
         alertNotCamera()
@@ -106,14 +108,14 @@ class Screen01: UIViewController {
             imagePicker.sourceType = .photoLibrary
             imagePicker.allowsEditing = false
             imagePicker.delegate = self
-            self.present(imagePicker, animated: true,completion: nil)
+            present(imagePicker, animated: true,completion: nil)
         }
     }
     
     func alertNotCamera() {
         let alertWarning = UIAlertController(title: "Warning", message: "You dont't have camera", preferredStyle: .alert)
         alertWarning.addAction(UIAlertAction(title: "OK", style: .cancel,handler: nil))
-        self.present(alertWarning, animated: true)
+        present(alertWarning, animated: true)
     }
     
  
