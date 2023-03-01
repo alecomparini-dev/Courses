@@ -43,10 +43,22 @@ class LoginViewController: UIViewController {
 
 
 extension LoginViewController: LoginScreenDelegate {
+    func tappedOpenChooseButton(_ sender: UIButton) {
+        let alert: Alert = Alert(controller: self)
+        alert.chooseImage(completion: completionChoose)
+    }
+    
+    func completionChoose(_ option: Choose) {
+        print(option)
+    }
+    
     func tappedLoginButton(_ sender: UIButton) {
         print(#function)
         print(sender)
     }
+    
+    
+    
 }
 
 extension LoginViewController: UITextFieldDelegate {

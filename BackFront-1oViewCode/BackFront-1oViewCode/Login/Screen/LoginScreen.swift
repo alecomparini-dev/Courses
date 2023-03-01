@@ -9,6 +9,8 @@ import UIKit
 
 protocol LoginScreenDelegate {
     func tappedLoginButton(_ sender: UIButton)
+    
+    func tappedOpenChooseButton(_ sender: UIButton)
 }
 
 
@@ -114,6 +116,20 @@ class LoginScreen: UIView {
         return button
     }()
     
+    lazy var openAlertButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(systemName: "calendar"), for: .normal)
+        button.setPreferredSymbolConfiguration(UIImage.SymbolConfiguration(pointSize: 45), forImageIn: .normal)
+        button.tintColor = UIColor.white
+        button.addTarget(self, action: #selector(tappedOpenAlertButton), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc func tappedOpenAlertButton(_ sender: UIButton) {
+        delegate?.tappedOpenChooseButton(sender)
+    }
+    
     
     override init(frame: CGRect) {
         print(#function)
@@ -135,6 +151,7 @@ class LoginScreen: UIView {
         self.addSubview(emailTextField)
         self.addSubview(passwordTextField)
         self.addSubview(loginButton)
+        self.addSubview(openAlertButton)
     }
     
     
@@ -167,7 +184,12 @@ class LoginScreen: UIView {
             loginButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -80),
             loginButton.leadingAnchor.constraint(equalTo: emailLabel.leadingAnchor),
             loginButton.trailingAnchor.constraint(equalTo: emailLabel.trailingAnchor),
-            loginButton.heightAnchor.constraint(equalToConstant: 40)
+            loginButton.heightAnchor.constraint(equalToConstant: 40),
+            
+            openAlertButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 5),
+            openAlertButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 25),
+            openAlertButton.widthAnchor.constraint(equalToConstant: 60),
+            openAlertButton.heightAnchor.constraint(equalToConstant: 60)
             
         ])
     }

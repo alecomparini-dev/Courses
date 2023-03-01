@@ -13,6 +13,7 @@
 		02E921A729AFA307000DEB02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02E921A529AFA307000DEB02 /* LaunchScreen.storyboard */; };
 		02E921B429AFA82F000DEB02 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E921B329AFA82F000DEB02 /* LoginViewController.swift */; };
 		02E921B629AFA8F1000DEB02 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E921B529AFA8F1000DEB02 /* LoginScreen.swift */; };
+		02E921BA29AFE0C6000DEB02 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E921B929AFE0C6000DEB02 /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		02E921A829AFA307000DEB02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02E921B329AFA82F000DEB02 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		02E921B529AFA8F1000DEB02 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		02E921B929AFE0C6000DEB02 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		02E9219929AFA305000DEB02 /* BackFront-1oViewCode */ = {
 			isa = PBXGroup;
 			children = (
+				02E921B729AFE04D000DEB02 /* Components */,
 				02E921AE29AFA762000DEB02 /* Login */,
 				02E9219A29AFA305000DEB02 /* AppDelegate.swift */,
 				02E9219C29AFA305000DEB02 /* SceneDelegate.swift */,
@@ -89,6 +92,22 @@
 				02E921B329AFA82F000DEB02 /* LoginViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		02E921B729AFE04D000DEB02 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				02E921B829AFE05C000DEB02 /* Alerts */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		02E921B829AFE05C000DEB02 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				02E921B929AFE0C6000DEB02 /* Alert.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +183,7 @@
 				02E9219B29AFA305000DEB02 /* AppDelegate.swift in Sources */,
 				02E921B629AFA8F1000DEB02 /* LoginScreen.swift in Sources */,
 				02E921B429AFA82F000DEB02 /* LoginViewController.swift in Sources */,
+				02E921BA29AFE0C6000DEB02 /* Alert.swift in Sources */,
 				02E9219D29AFA305000DEB02 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
