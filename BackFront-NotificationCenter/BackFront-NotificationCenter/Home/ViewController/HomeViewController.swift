@@ -19,6 +19,22 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configHomeScreenDelegate()
+    }
+    
+    private func configHomeScreenDelegate() {
+        homeScreen?.delegate(delegate: self)
     }
 
+}
+
+
+//  MARK: - EXTENSION - HOME SCREEN DELEGATE
+
+extension HomeViewController: HomeScreenDeletage {
+    func tappedClickHere() {
+        let selectionVC = SelectionViewController()
+//        present(selectionVC, animated: true)
+        navigationController?.pushViewController(selectionVC, animated: true)
+    }
 }
