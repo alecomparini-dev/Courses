@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class LoginScreen: UIView {
 
     override init(frame: CGRect) {
@@ -58,6 +59,45 @@ class LoginScreen: UIView {
         return label
     }()
     
+    lazy var loginTextField: UITextField = {
+        let tf = UITextField()
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.attributedPlaceholder = NSAttributedString(string: "Login", attributes: [
+            NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.4)
+        ])
+        tf.backgroundColor = UIColor(red: 52/255, green: 52/255, blue: 52/255, alpha: 1)
+        tf.textColor = UIColor.white
+        tf.clipsToBounds = true
+        tf.layer.cornerRadius = 12
+        tf.borderStyle = .roundedRect
+        tf.layer.borderWidth = 1
+        tf.layer.borderColor = UIColor.white.cgColor
+        let padding = UIView(frame: CGRect(x: 1, y: 1, width: 5, height: tf.frame.height))
+        tf.leftView = padding
+        tf.leftViewMode = .always
+        return tf
+    }()
+    
+    lazy var passwordTextField: UITextField = {
+        let tf = UITextField()
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [
+            NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.4)
+        ])
+        tf.backgroundColor = UIColor(red: 52/255, green: 52/255, blue: 52/255, alpha: 1)
+        tf.textColor = UIColor.white
+        tf.clipsToBounds = true
+        tf.layer.cornerRadius = 12
+        tf.borderStyle = .roundedRect
+        tf.layer.borderWidth = 1
+        tf.layer.borderColor = UIColor.white.cgColor
+        let padding = UIView(frame: CGRect(x: 1, y: 1, width: 5, height: tf.frame.height))
+        tf.leftView = padding
+        tf.leftViewMode = .always
+        return tf
+    }()
+    
+    
     
     
     //MARK: - Add SubView
@@ -67,6 +107,8 @@ class LoginScreen: UIView {
         addSubview(logoImage)
         addSubview(logoLabel)
         addSubview(descriptionLabel)
+        addSubview(loginTextField)
+        addSubview(passwordTextField)
     }
     
     
@@ -93,10 +135,21 @@ class LoginScreen: UIView {
             descriptionLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
             descriptionLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
             
+            loginTextField.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 45),
+            loginTextField.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            loginTextField.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            loginTextField.heightAnchor.constraint(equalToConstant: 40),
             
+            passwordTextField.topAnchor.constraint(equalTo: loginTextField.bottomAnchor, constant: 20),
+            passwordTextField.leadingAnchor.constraint(equalTo: loginTextField.leadingAnchor),
+            passwordTextField.trailingAnchor.constraint(equalTo: loginTextField.trailingAnchor),
+            passwordTextField.heightAnchor.constraint(equalTo: loginTextField.heightAnchor),
             
             
         ])
     }
+    
+    
+
     
 }
