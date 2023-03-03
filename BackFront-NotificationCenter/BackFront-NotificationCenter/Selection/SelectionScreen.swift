@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol SelectionScreenDelegate {
+protocol SelectionScreenDelegate: AnyObject {
     func tappedNote(_ sender: UIButton)
     func tappedDeskTop(_ sender: UIButton)
 }
@@ -15,7 +15,7 @@ protocol SelectionScreenDelegate {
 
 class SelectionScreen: UIView {
 
-    private var delegate: SelectionScreenDelegate?
+    private weak var delegate: SelectionScreenDelegate?
     public func delegate(delegate: SelectionScreenDelegate) {
         self.delegate = delegate
     }

@@ -7,14 +7,14 @@
 
 import UIKit
 
-protocol HomeScreenDeletage {
+protocol HomeScreenDeletage: AnyObject {
     func tappedClickHere()
 }
 
 
 class HomeScreen: UIView {
 
-    private var delegate: HomeScreenDeletage?
+    private weak var delegate: HomeScreenDeletage?
     public func delegate(delegate: HomeScreenDeletage) {
         self.delegate = delegate
     }
