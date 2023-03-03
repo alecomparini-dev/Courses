@@ -93,7 +93,6 @@ class SelectionScreen: UIView {
     
     
 //  MARK: - @OBJC FUNCTIONS
-    
     @objc func tappedNoteButton(_ sender: UIButton) {
         delegate?.tappedNote(sender)
     }

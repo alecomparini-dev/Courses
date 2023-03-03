@@ -7,8 +7,18 @@
 
 import UIKit
 
-class SelectionViewController: UIViewController {
+protocol SelectionViewControllerDelegate: AnyObject {
+    func updateNote()
+    func updateDesktop()
+}
 
+class SelectionViewController: UIViewController {
+    
+    private weak var delegate: SelectionViewControllerDelegate?
+    public func delegate(delegate: SelectionViewControllerDelegate) {
+        self.delegate = delegate
+    }
+    
     private var selectionScreen: SelectionScreen?
     
     override func loadView() {
@@ -32,13 +42,16 @@ class SelectionViewController: UIViewController {
 extension SelectionViewController: SelectionScreenDelegate {
     
     func tappedNote(_ sender: UIButton) {
-        NotificationCenter.default.post(name: Notification.Name("note"), object: nil)
+//        NotificationCenter.default.post(name: Notification.Name("note"), object: nil)
+        delegate?.updateNote()
         navigationController?.popViewController(animated: true)
     }
     
     func tappedDeskTop(_ sender: UIButton) {
-        NotificationCenter.default.post(name: Notification.Name("desktop"), object: nil)
+//        NotificationCenter.default.post(name: Notification.Name("desktop"), object: nil)
+        delegate?.updateDesktop()
         navigationController?.popViewController(animated: true)
     }
     
 }
+
