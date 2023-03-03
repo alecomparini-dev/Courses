@@ -7,8 +7,19 @@
 
 import UIKit
 
+protocol SelectionScreenDelegate {
+    func tappedNote(_ sender: UIButton)
+    func tappedDeskTop(_ sender: UIButton)
+}
+
+
 class SelectionScreen: UIView {
 
+    private var delegate: SelectionScreenDelegate?
+    public func delegate(delegate: SelectionScreenDelegate) {
+        self.delegate = delegate
+    }
+    
 //  MARK: - INIT
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,7 +45,7 @@ class SelectionScreen: UIView {
     
     
     lazy var stackView: UIStackView = {
-        let sw = UIStackView(arrangedSubviews: [viewNote,viewDesk])
+        let sw = UIStackView()
         sw.translatesAutoresizingMaskIntoConstraints = false
         sw.distribution = .fillEqually
         sw.axis = .vertical
@@ -46,8 +57,7 @@ class SelectionScreen: UIView {
     lazy var viewNote: UIView = {
         let vw = UIView()
         vw.translatesAutoresizingMaskIntoConstraints = false
-        vw.layer.borderColor = UIColor.white.cgColor
-        vw.layer.borderWidth = 2
+        vw.isUserInteractionEnabled = false
         return vw
     }()
     
@@ -56,6 +66,7 @@ class SelectionScreen: UIView {
         bt.translatesAutoresizingMaskIntoConstraints = false
         bt.tintColor = UIColor.white
         bt.setImage(UIImage(named: "Macbook")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        bt.addTarget(self, action: #selector(tappedNoteButton), for: .touchUpInside)
         return bt
     }()
     
@@ -63,8 +74,7 @@ class SelectionScreen: UIView {
     lazy var viewDesk: UIView = {
         let vw = UIView()
         vw.translatesAutoresizingMaskIntoConstraints = false
-        vw.layer.borderColor = UIColor.white.cgColor
-        vw.layer.borderWidth = 1
+//        vw.isUserInteractionEnabled = false
         return vw
     }()
     
@@ -73,18 +83,34 @@ class SelectionScreen: UIView {
         bt.translatesAutoresizingMaskIntoConstraints = false
         bt.tintColor = UIColor.white
         bt.setImage(UIImage(named: "Imac")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        bt.imageView?.isUserInteractionEnabled = false
+        bt.isUserInteractionEnabled = true
+        bt.isEnabled = true
+        bt.addTarget(self, action: #selector(tappedDeskTopButton), for: .touchUpInside)
+        
         return bt
     }()
+    
+    
+//  MARK: - @OBJC FUNCTIONS
+    
+    @objc func tappedNoteButton(_ sender: UIButton) {
+        delegate?.tappedNote(sender)
+    }
+    
+    @objc func tappedDeskTopButton(_ sender: UIButton) {
+        delegate?.tappedDeskTop(sender)
+    }
     
     
 //  MARK: - ADD ELEMENTS
     private func addElements() {
         addSubview(optionLabel)
         addSubview(stackView)
-        stackView.addSubview(viewNote)
-        stackView.addSubview(viewDesk)
-        viewDesk.addSubview(desk)
-        viewNote.addSubview(note)
+        stackView.addSubview(desk)
+        stackView.addSubview(note)
+        stackView.addArrangedSubview(viewDesk)
+        stackView.addArrangedSubview(viewNote)
     }
     
     
@@ -106,7 +132,7 @@ class SelectionScreen: UIView {
             desk.centerYAnchor.constraint(equalTo: viewDesk.centerYAnchor),
             desk.heightAnchor.constraint(equalToConstant: 130),
             desk.widthAnchor.constraint(equalToConstant: 220),
-            
+
             note.centerXAnchor.constraint(equalTo: viewNote.centerXAnchor),
             note.centerYAnchor.constraint(equalTo: viewNote.centerYAnchor),
             note.heightAnchor.constraint(equalToConstant: 130),
@@ -114,6 +140,7 @@ class SelectionScreen: UIView {
 
             
         ])
+
         
     }
     

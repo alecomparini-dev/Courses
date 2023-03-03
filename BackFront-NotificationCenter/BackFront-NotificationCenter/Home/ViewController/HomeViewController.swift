@@ -20,10 +20,27 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configHomeScreenDelegate()
+        configObserver()
     }
     
     private func configHomeScreenDelegate() {
         homeScreen?.delegate(delegate: self)
+    }
+    
+    func configObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(updateNote), name: Notification.Name("note"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateDesktop), name: Notification.Name("desktop"), object: nil)
+    }
+    
+    @objc func updateNote(notification: Notification) {
+        homeScreen?.appleImageView.image = UIImage(named: "macbook_pro")
+        homeScreen?.backgroundColor = .red
+    }
+    
+    @objc func updateDesktop(notification: Notification) {
+        homeScreen?.appleImageView.image = UIImage(named: "imac_pro")
+        homeScreen?.backgroundColor = .cyan
     }
 
 }
