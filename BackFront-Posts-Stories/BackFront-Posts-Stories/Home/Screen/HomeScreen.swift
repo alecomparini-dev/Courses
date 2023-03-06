@@ -18,5 +18,31 @@ class HomeScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+//  MARK: - Elements
+//    lazy var storiesView: UIView = {
+//        let view = UIView()
+//        view.translatesAutoresizingMaskIntoConstraints = false
+//        view.clipsToBounds = true
+//        view.layer.cornerRadius = 12
+//        view.backgroundColor = UIColor.appBackGround
+//        return view
+//    }()
 
+    lazy var collectView: UICollectionView = {
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        cv.showsVerticalScrollIndicator = false
+        cv.backgroundColor = .clear
+//      TODO: Register
+        return cv
+    }()
+    
+    public func delegateCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
+        collectView.delegate = delegate
+        collectView.dataSource = dataSource
+    }
+    
+    
 }
