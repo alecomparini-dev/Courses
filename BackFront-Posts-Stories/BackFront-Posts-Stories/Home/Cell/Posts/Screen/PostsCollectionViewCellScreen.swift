@@ -1,5 +1,5 @@
 //
-//  HomeScreen.swift
+//  PostsCollectionViewCellScreen.swift
 //  BackFront-Posts-Stories
 //
 //  Created by Alessandro Comparini on 06/03/23.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class HomeScreen: UIView {
+class PostsCollectionViewCellScreen: UIView {
 
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .appBackGround
         addElements()
         configConstraints()
     }
@@ -20,31 +20,33 @@ class HomeScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    lazy var collectView : UICollectionView = {
+//  MARK: - Elements
+    
+    lazy var collectionView: UICollectionView = {
         let lay = UICollectionViewFlowLayout()
         lay.scrollDirection = .vertical
         let cv = UICollectionView(frame: .zero, collectionViewLayout: lay)
         cv.translatesAutoresizingMaskIntoConstraints = false
-        cv.showsVerticalScrollIndicator = false
         cv.backgroundColor = .clear
-        cv.register(StoriesCollectionViewCell.self, forCellWithReuseIdentifier: StoriesCollectionViewCell.identifier)
-        cv.register(PostsCollectionViewCell.self, forCellWithReuseIdentifier: PostsCollectionViewCell.identifier)
+        cv.register(PostCollectionViewCell.self, forCellWithReuseIdentifier: PostCollectionViewCell.identifier)
         return cv
     }()
-
     
-    public func delegateCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
-        collectView.delegate = delegate
-        collectView.dataSource = dataSource
+    public func configDelegateCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
+        collectionView.delegate = delegate
+        collectionView.dataSource = dataSource
     }
     
     
+//  MARK: - Add Elements and Add Constraints
     private func addElements() {
-        addSubview(collectView)
+        addSubview(collectionView)
     }
+    
     
     private func configConstraints() {
-        collectView.pin(to: self)
+        collectionView.pin(to: self)
     }
+    
     
 }

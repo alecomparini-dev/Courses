@@ -8,6 +8,6 @@
 import Foundation
 
 struct Story {
-    let image: String
+    let imageProfile: String
     let userName: String
 }
