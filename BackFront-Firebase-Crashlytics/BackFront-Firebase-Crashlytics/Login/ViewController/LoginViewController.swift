@@ -18,7 +18,48 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = loginScreen
+        configScreen()
     }
     
+    
+    private func configScreen() {
+        configTapGesture()
+        loginScreen.loginScreenDelegate(delegate: self)
+        loginScreen.textFieldsDelegate(delegate: self)
+    }
+    
+    private func configTapGesture() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(lowerKeyboard))
+        view.addGestureRecognizer(tap)
+    }
 
+    @objc func lowerKeyboard() {
+        view.endEditing(true)
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print(#function)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+    
+}
+
+extension LoginViewController: LoginScreenDelegate {
+    func tappedSignUpButton() {
+        lowerKeyboard()
+        let registerVC = RegisterViewController()
+        navigationController?.pushViewController(registerVC, animated: true)
+    }
+    
+    func tappedContinueButton() {
+        lowerKeyboard()
+    }
+    
+    
 }
