@@ -10,6 +10,7 @@ import UIKit
 class LoginViewController: UIViewController {
     
     private let loginScreen: LoginScreen = LoginScreen()
+    private let viewModel: LoginViewModel = LoginViewModel()
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
@@ -58,7 +59,17 @@ extension LoginViewController: LoginScreenDelegate {
     }
     
     func tappedContinueButton() {
+        viewModel.login(email: loginScreen.emailTextField.text ?? "", password: loginScreen.passwordTextField.text ?? "", completion: returnLogin)
         lowerKeyboard()
+    }
+    
+    func returnLogin(error: String?) {
+        if error != nil {
+            print("Fazer um alert para informar que deu Erro !!!", error ?? "")
+            return
+        }
+        let homeScreenVC = HomeViewController()
+        navigationController?.pushViewController(homeScreenVC, animated: true)
     }
     
     

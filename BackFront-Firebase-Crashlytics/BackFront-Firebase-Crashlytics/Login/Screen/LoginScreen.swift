@@ -16,6 +16,9 @@ protocol LoginScreenDelegate: AnyObject {
 class LoginScreen: UIView {
 
     private weak var delegate: LoginScreenDelegate?
+    public func loginScreenDelegate(delegate: LoginScreenDelegate) {
+        self.delegate = delegate
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -165,10 +168,6 @@ class LoginScreen: UIView {
     public func textFieldsDelegate(delegate: UITextFieldDelegate) {
         emailTextField.delegate = delegate
         passwordTextField.delegate = delegate
-    }
-    
-    public func loginScreenDelegate(delegate: LoginScreenDelegate) {
-        self.delegate = delegate
     }
     
 }
