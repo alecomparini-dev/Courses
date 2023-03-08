@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		024FEC5529B8CCC900D99CC4 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FEC5429B8CCC900D99CC4 /* Alert.swift */; };
+		024FEC5829B8D1F500D99CC4 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FEC5729B8D1F500D99CC4 /* Information.swift */; };
 		029D4FA829B7D2D5008F090C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 029D4FA729B7D2D5008F090C /* Assets.xcassets */; };
 		029D4FAD29B7EF63008F090C /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029D4FAC29B7EF63008F090C /* RegisterScreen.swift */; };
 		029D4FAF29B7EF79008F090C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029D4FAE29B7EF79008F090C /* RegisterViewController.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		024FEC5429B8CCC900D99CC4 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		024FEC5729B8D1F500D99CC4 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		029D4FA729B7D2D5008F090C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../BackFront-Posts-Stories/BackFront-Posts-Stories/Assets.xcassets"; sourceTree = "<group>"; };
 		029D4FAC29B7EF63008F090C /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		029D4FAE29B7EF79008F090C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +94,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		024FEC5329B8CC9C00D99CC4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				024FEC5629B8CE3E00D99CC4 /* Alert */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		024FEC5629B8CE3E00D99CC4 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				024FEC5429B8CCC900D99CC4 /* Alert.swift */,
+				024FEC5729B8D1F500D99CC4 /* Information.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		029D4FA929B7EF12008F090C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +156,7 @@
 		02F9C2C329B7C92000AB2895 /* BackFront-Firebase-Crashlytics */ = {
 			isa = PBXGroup;
 			children = (
+				024FEC5329B8CC9C00D99CC4 /* Utils */,
 				02F9C2F629B7C9A500AB2895 /* Model */,
 				02F9C2D829B7C9A400AB2895 /* Extension */,
 				02F9C2DB29B7C9A500AB2895 /* Home */,
@@ -521,6 +543,8 @@
 				02F9C30429B7C9A500AB2895 /* StoryCollectionViewCell.swift in Sources */,
 				029D4FAD29B7EF63008F090C /* RegisterScreen.swift in Sources */,
 				02F9C2FC29B7C9A500AB2895 /* HomeViewController.swift in Sources */,
+				024FEC5829B8D1F500D99CC4 /* Information.swift in Sources */,
+				024FEC5529B8CCC900D99CC4 /* Alert.swift in Sources */,
 				02F9C30229B7C9A500AB2895 /* StoriesViewModel.swift in Sources */,
 				02F9C30729B7C9A500AB2895 /* HomeScreen.swift in Sources */,
 				02F9C30629B7C9A500AB2895 /* StoriesCollectionViewCellScreen.swift in Sources */,

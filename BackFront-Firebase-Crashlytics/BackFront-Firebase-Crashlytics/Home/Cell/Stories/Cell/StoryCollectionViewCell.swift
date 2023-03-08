@@ -28,7 +28,7 @@ class StoryCollectionViewCell: UICollectionViewCell {
     }
     
     public func setupCell(story: Story, indexPath: IndexPath) {
-        storyScreen.profileImageView.image = UIImage(named: story.imageProfile)
+        storyScreen.profileImageView.image = UIImage(named: story.image ?? "")
         storyScreen.userNameLabel.text = story.userName
         storyScreen.addButton.isHidden = indexPath.row != 0
     }

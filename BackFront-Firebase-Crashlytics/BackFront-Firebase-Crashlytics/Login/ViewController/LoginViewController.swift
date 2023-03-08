@@ -65,7 +65,8 @@ extension LoginViewController: LoginScreenDelegate {
     
     func returnLogin(error: String?) {
         if error != nil {
-            print("Fazer um alert para informar que deu Erro !!!", error ?? "")
+            let alert = Alert(controller: self, title: "Warning", message: "User or Password incorrect")
+            alert.warning()
             return
         }
         let homeScreenVC = HomeViewController()

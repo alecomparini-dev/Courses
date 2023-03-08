@@ -28,9 +28,9 @@ class PostCollectionViewCell: UICollectionViewCell {
     }
     
     public func setupCell(post: Post) {
-        screen.profileImageView.image = UIImage(named: post.profileImage) 
+        screen.profileImageView.image = UIImage(named: post.profileImage ?? "")
         screen.userNameLabel.text = post.userName
-        screen.postImageView.image = UIImage(named: post.postImage)
+        screen.postImageView.image = UIImage(named: post.postImage ?? "")
     }
     
     

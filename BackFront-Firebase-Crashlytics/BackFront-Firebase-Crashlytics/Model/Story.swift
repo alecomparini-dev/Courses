@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Story {
-    let imageProfile: String
-    let userName: String
+struct Story: Codable {
+    let image: String?
+    let userName: String?
 }

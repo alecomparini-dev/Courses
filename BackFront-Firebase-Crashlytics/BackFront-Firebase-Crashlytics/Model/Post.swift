@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Post {
-    let profileImage: String
-    let userName: String
-    let postImage: String
+struct Post: Codable {
+    let profileImage: String?
+    let userName: String?
+    let postImage: String?
 }
