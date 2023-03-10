@@ -7,7 +7,16 @@
 
 import UIKit
 
+protocol HomeViewProtocol: AnyObject {
+    func success(data: HomeData?)
+    func error(error: Error?)
+}
+
 class HomeViewModel {
+    private weak var delegate: HomeViewProtocol?
+    public func delegate(delegate: HomeViewProtocol) {
+        self.delegate = delegate
+    }
 
     private var stories: [Story] = []
     private var posts: [Post] = []
@@ -34,12 +43,17 @@ class HomeViewModel {
     
     
     public func fetchAllRequest() {
-        service.getAllDataJsonFile { homeData, error in
+        
+        service.getAllDataJsonAlamofire { homeData, error in
             if error == nil {
                 self.posts = homeData?.posts ?? []
                 self.stories = homeData?.stories ?? []
+                self.delegate?.success(data: homeData ?? nil)
+            } else {
+                self.delegate?.error(error: error ?? nil)
             }
         }
+        
     }
     
     

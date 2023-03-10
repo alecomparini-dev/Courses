@@ -24,12 +24,13 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         homeViewModel.fetchAllRequest()
-        configDelegateCollectionView()
+        configHomeViewModelProtocol()
     }
     
-    private func configDelegateCollectionView() {
-        homeScreen.delegateCollectionView(delegate: self, dataSource: self)
+    private func configHomeViewModelProtocol() {
+        homeViewModel.delegate(delegate: self)
     }
+    
 
 }
 
@@ -54,6 +55,20 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return homeViewModel.sizeForItem(indexPath, collectionView.frame)
+    }
+    
+    
+}
+
+extension HomeViewController: HomeViewProtocol {
+    func success(data: HomeData?) {
+        DispatchQueue.main.async {
+            self.homeScreen.delegateCollectionView(delegate: self, dataSource: self)
+        }
+    }
+    
+    func error(error: Error?) {
+        print(#function)
     }
     
     
