@@ -1,0 +1,6 @@
+framework module Pods_BackFront_BFNFT {
+  umbrella header "Pods-BackFront-BFNFT-umbrella.h"
+
+  export *
+  module * { export * }
+}
