@@ -302,7 +302,7 @@ class LoginScreen: UIView {
         
         NSLayoutConstraint.activate([
             signInImageView.centerYAnchor.constraint(equalTo: signInStackView.centerYAnchor),
-            signInImageView.trailingAnchor.constraint(equalTo: signInLabel.leadingAnchor, constant: -5),
+            signInImageView.trailingAnchor.constraint(equalTo: 		.leadingAnchor, constant: -5),
             signInImageView.heightAnchor.constraint(equalTo: signInStackView.heightAnchor, constant: -17),
         ])
         
