@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0271F4D029BBDF6700F12399 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0271F4CF29BBDF6700F12399 /* String+Extension.swift */; };
 		02D562A729BB789C00415C85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D562A629BB789C00415C85 /* AppDelegate.swift */; };
 		02D562A929BB789C00415C85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D562A829BB789C00415C85 /* SceneDelegate.swift */; };
 		02D562B329BB789E00415C85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D562B129BB789E00415C85 /* LaunchScreen.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0271F4CF29BBDF6700F12399 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		02D562A329BB789C00415C85 /* BackFront-BFNFT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BackFront-BFNFT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D562A629BB789C00415C85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02D562A829BB789C00415C85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				02D562DA29BBB93E00415C85 /* UITextField+Extension.swift */,
 				02D562DE29BBC5C700415C85 /* UIButton+Extension.swift */,
 				02D562E029BBC8F900415C85 /* UIViewController+Extension.swift */,
+				0271F4CF29BBDF6700F12399 /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				02D562DF29BBC5C700415C85 /* UIButton+Extension.swift in Sources */,
 				02D562D929BBA01400415C85 /* UIColor+Extension.swift in Sources */,
 				02D562C129BB794A00415C85 /* LoginScreen.swift in Sources */,
+				0271F4D029BBDF6700F12399 /* String+Extension.swift in Sources */,
 				02D562E129BBC8F900415C85 /* UIViewController+Extension.swift in Sources */,
 				02D562CA29BB7BD700415C85 /* RegisterScreen.swift in Sources */,
 				02D562A929BB789C00415C85 /* SceneDelegate.swift in Sources */,

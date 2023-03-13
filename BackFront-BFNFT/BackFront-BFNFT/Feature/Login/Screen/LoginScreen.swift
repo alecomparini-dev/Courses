@@ -32,7 +32,7 @@ class LoginScreen: UIView {
 //  MARK: - Delegates TextFields
     public func configTextFieldsDelegate(delegate: UITextFieldDelegate) {
         emailTextField.delegate = delegate
-        passworldTextField.delegate = delegate
+        passwordTextField.delegate = delegate
     }
     
     public func configLoginScreenDelegate(delegate: LoginScreenDelegate) {
@@ -94,7 +94,7 @@ class LoginScreen: UIView {
         return tf
     }()
     
-    lazy var passworldTextField: UITextField = {
+    lazy var passwordTextField: UITextField = {
         let tf = UITextField()
         tf.clipsToBounds = true
         tf.layer.cornerRadius = 10
@@ -209,7 +209,7 @@ class LoginScreen: UIView {
         addSubview(logoLabel)
         addSubview(descriptionLabel)
         addSubview(emailTextField)
-        addSubview(passworldTextField)
+        addSubview(passwordTextField)
         addSubview(forgotButton)
         addSubview(loginView)
         addSubview(loginButton)
@@ -276,7 +276,7 @@ class LoginScreen: UIView {
     }
     
     private func configPassworldTextFieldConstraints() {
-        passworldTextField.snp.makeConstraints { make in
+        passwordTextField.snp.makeConstraints { make in
             make.top.equalTo(emailTextField.snp.bottom).offset(15)
             make.leading.trailing.height.equalTo(emailTextField)
         }
@@ -284,8 +284,8 @@ class LoginScreen: UIView {
     
     private func configForgotButtonConstraints() {
         forgotButton.snp.makeConstraints { make in
-            make.top.equalTo(passworldTextField.snp.bottom).offset(5)
-            make.trailing.equalTo(passworldTextField.snp.trailing).inset(10)
+            make.top.equalTo(passwordTextField.snp.bottom).offset(5)
+            make.trailing.equalTo(passwordTextField.snp.trailing).inset(10)
             make.height.equalTo(20)
         }
     }
@@ -293,8 +293,8 @@ class LoginScreen: UIView {
     private func configLoginViewConstraints() {
         loginView.snp.makeConstraints { make in
             make.top.equalTo(forgotButton.snp.bottom).offset(40)
-            make.leading.equalTo(passworldTextField.snp.leading)
-            make.trailing.equalTo(passworldTextField.snp.trailing)
+            make.leading.equalTo(passwordTextField.snp.leading)
+            make.trailing.equalTo(passwordTextField.snp.trailing)
             make.height.equalTo(40)
         }
     }
